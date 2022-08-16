@@ -2,9 +2,9 @@
   "name": "@adaph/cardano-utils",
   "version": "1.0.0",
   "description": "Collection of Cardano utilities to simplify the development of javascript/typescript/nodejs Cardano applications.",
-  "main": "index.js",
+  "main": "test/app.ts",
   "scripts": {
-    "start": "ts-node app.ts",
+    "start": "ts-node test/app.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

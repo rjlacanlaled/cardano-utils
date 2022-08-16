@@ -1,18 +1,19 @@
 import { BlockFrostAPI } from '@blockfrost/blockfrost-js';
 import { mnemonicToEntropy } from 'bip39';
-import { mintNativeTokenTransaction } from './utils/asset-utils';
-import { requestTestAdaAsync } from './utils/faucet-utils';
-import { getLatestProtocolParametersAsync } from './utils/tx-utils';
+import { mintNativeTokenTransaction } from '../utils/asset-utils';
+import { requestTestAdaAsync } from '../utils/faucet-utils';
+import { getLatestProtocolParametersAsync } from '../utils/tx-utils';
 import {
+    generateEntropy,
     getBaseAddress,
     getRootKeyFromEntropy,
     getStakeKeyFromAccountKey,
     getUtxoPubKeyFromAccountKey,
     getWalletFromRootKey,
-} from './utils/wallet-utils';
+} from '../utils/wallet-utils';
 import CardanoWasm, { MultiAsset } from '@dcspark/cardano-multiplatform-lib-nodejs';
-import { UTXO } from './types/cardano-types';
-import { convertBlockfrostUtxoToCardanoWasmUtxoAsync } from './utils/utxo-utils';
+import { UTXO } from '../types/cardano-types';
+import { convertBlockfrostUtxoToCardanoWasmUtxoAsync } from '../utils/utxo-utils';
 
 const blockfrostAPI = new BlockFrostAPI({
     projectId: 'testnet2G4i1WtQqUP382VkwQXs0bYqTRYCFsBQ',
@@ -21,7 +22,8 @@ const blockfrostAPI = new BlockFrostAPI({
 
 (async function () {
     // const protocolParameters = await getLatestProtocolParametersAsync(blockfrostAPI);
-    // const entropy = mnemonicToEntropy(process.env.MNEMONIC as string);
+    const entropy = generateEntropy(process.env.MNEMONIC as string);
+    console.log(entropy);
     // const rootKey = getRootKeyFromEntropy(entropy);
     // const accountKey = getWalletFromRootKey(rootKey, 0);
     // const utxoKeys = getUtxoPubKeyFromAccountKey(accountKey);
@@ -53,12 +55,11 @@ const blockfrostAPI = new BlockFrostAPI({
     // );
     // const tx = await blockfrostAPI.txSubmit(getMintTx.to_bytes());
 
-    const entropy = mnemonicToEntropy(process.env.MNEMONIC as string);
-    const rootKey = getRootKeyFromEntropy(entropy);
-    const accountKey = getWalletFromRootKey(rootKey, 0);
-    const utxoKeys = getUtxoPubKeyFromAccountKey(accountKey);
-    const stakeKey = getStakeKeyFromAccountKey(accountKey);
-    const baseAddress = getBaseAddress(utxoKeys.utxoPubkey, stakeKey, CardanoWasm.NetworkInfo.testnet());
+    // const rootKey = getRootKeyFromEntropy(entropy);
+    // const accountKey = getWalletFromRootKey(rootKey, 0);
+    // const utxoKeys = getUtxoPubKeyFromAccountKey(accountKey);
+    // const stakeKey = getStakeKeyFromAccountKey(accountKey);
+    // const baseAddress = getBaseAddress(utxoKeys.utxoPubkey, stakeKey, CardanoWasm.NetworkInfo.testnet());
 
-    console.log(baseAddress.to_address().to_bech32());
+    // console.log(baseAddress.to_address().to_bech32());
 })();
