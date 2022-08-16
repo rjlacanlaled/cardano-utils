@@ -58,3 +58,4 @@ const blockfrostAPI = new blockfrost_js_1.BlockFrostAPI({
         // console.log(baseAddress.to_address().to_bech32());
     });
 })();
+//# sourceMappingURL=app.js.map

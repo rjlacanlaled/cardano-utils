@@ -7,3 +7,4 @@ const toHex = (bytes) => Buffer.from(bytes).toString('hex');
 exports.toHex = toHex;
 const asciiToHex = (ascii) => (0, exports.toHex)(Buffer.from(ascii, 'ascii'));
 exports.asciiToHex = asciiToHex;
+//# sourceMappingURL=string-utils.js.map

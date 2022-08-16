@@ -97,3 +97,4 @@ const waitForFundsAsync = (address, blockfrostAPI) => __awaiter(void 0, void 0, 
     }
 });
 exports.waitForFundsAsync = waitForFundsAsync;
+//# sourceMappingURL=faucet-utils.js.map

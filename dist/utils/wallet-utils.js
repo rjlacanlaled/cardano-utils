@@ -65,3 +65,4 @@ exports.getPointerAddress = getPointerAddress;
 const harden = (num) => {
     return 0x80000000 + num;
 };
+//# sourceMappingURL=wallet-utils.js.map

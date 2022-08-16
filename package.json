@@ -1,10 +1,21 @@
 {
   "name": "@adaph/cardano-utils",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Collection of Cardano utilities to simplify the development of javascript/typescript/nodejs Cardano applications.",
   "main": "test/app.ts",
+  "types": "/dist/@types",
   "type": "module",
+  "exports": {
+    "./assets": "./dist/utils/asset-utils.d.ts",
+    "./epoch": "./dist/utils/epoch-utils.d.ts",
+    "./faucet": "./dist/utils/faucet-utils.d.ts",
+    "./string": "./dist/utils/string-utils.d.ts",
+    "./tx": "./dist/utils/tx-utils.d.ts",
+    "./utxo": "./dist/utils/utxo-utils.d.ts",
+    "./wallet": "./dist/utils/wallet-utils.d.ts"
+  }, 
   "scripts": {
+    "build": "npx tsc --outDir dist",
     "start": "ts-node test/app.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

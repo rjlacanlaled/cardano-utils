@@ -39,3 +39,4 @@ const mintNativeTokenTransaction = (privKey, changeAddress, name, totalSupply, t
 exports.mintNativeTokenTransaction = mintNativeTokenTransaction;
 const mintNFTTokenTransaction = () => { };
 exports.mintNFTTokenTransaction = mintNFTTokenTransaction;
+//# sourceMappingURL=asset-utils.js.map

@@ -14,3 +14,4 @@ const getCurrentEpochsAsync = (blockfrostAPI) => __awaiter(void 0, void 0, void 
     return yield blockfrostAPI.epochsLatest();
 });
 exports.getCurrentEpochsAsync = getCurrentEpochsAsync;
+//# sourceMappingURL=epoch-utils.js.map
