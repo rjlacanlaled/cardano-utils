@@ -1,14 +1,16 @@
 {
   "name": "@adaph/cardano-utils",
-  "version": "1.0.5",
+  "version": "1.0.8",
   "description": "Collection of Cardano utilities to simplify the development of javascript/typescript/nodejs Cardano applications.",
-  "main": "test/app.ts",
-  "types": "/dist/types",
+  "main": "lib/index.js",
+  "types": "lib/types",
   "type": "module",
   "exports": {
       "./wallet": "./dist/utils/wallet-utils.js"
-
   }, 
+  "files": [
+    "lib/**/*"
+  ],
   "scripts": {
     "build": "npx tsc --outDir dist",
     "start": "ts-node test/app.ts",
