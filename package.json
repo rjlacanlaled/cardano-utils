@@ -1,6 +1,6 @@
 {
   "name": "@adaph/cardano-utils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Collection of Cardano utilities to simplify the development of javascript/typescript/nodejs Cardano applications.",
   "main": "test/app.ts",
   "type": "module",
