@@ -1,13 +1,9 @@
 {
   "name": "@adaph/cardano-utils",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Collection of Cardano utilities to simplify the development of javascript/typescript/nodejs Cardano applications.",
-  "main": "lib/index.js",
+  "main": "index.ts",
   "types": "lib/types",
-  "type": "module",
-  "exports": {
-      "./wallet": "./dist/utils/wallet-utils.js"
-  }, 
   "files": [
     "lib/**/*"
   ],
